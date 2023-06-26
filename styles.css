@@ -1,0 +1,326 @@
+:root {
+  --background-color: #F3F4F6;
+  --text-color: #333;
+  --glass-card-background: rgba(255, 255, 255, 0.3);
+  --switch-background: #ccc;
+  --slider-background: #fff;
+  --slider-checked-background: #2196F3;
+}
+
+body {
+  background: linear-gradient(rgb(234, 167, 223), orange, rgb(240, 86, 86), rgb(223, 43, 208), rgb(66, 147, 194)); /* Update the gradient colors */
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  background: linear-gradient(rgb(31, 41, 55), black); /* Update the gradient colors */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.glass-card {
+  background-color: var(--glass-card-background);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 450px;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 10px;
+
+  
+}
+
+.switch input[type="checkbox"] {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-background);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--slider-background);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + .slider {
+  background-color: var(--slider-checked-background);
+}
+
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--glass-card-background);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+ 
+
+  
+}
+
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+ 
+}
+
+
+
+.navbarmenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 10px;
+ 
+}
+.Appointment{
+  margin-bottom: 10px;
+ 
+}
+
+.navbarmenu li {
+  margin-right: 10px;
+}
+
+.navbarmenu li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  font-size: x-large;
+  color: black;
+}
+.navbarmenu li a ::after{
+  
+  color: rgb(255, 255, 255);
+}
+
+
+
+.navbar.dark-mode {
+  color: white; /* Update the text color for dark mode */
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbarmenu.dark-mode {
+  color: white; /* Update the text color for dark mode */
+}
+
+.title {
+  flex: 1;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 150px;
+}
+
+.title .circle {
+  margin-top: 20px;
+}
+
+.title.dark-mode {
+  color: white; /* Update the text color for dark mode */
+}
+
+.titles.dark-mode {
+  color: #ffffff;
+}
+
+.image-content {
+  display: flex;
+  align-items: center;
+}
+
+.textcontent.dark-mode {
+  color: white; /* Update the text color for dark mode */
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-left: 10px;
+  
+
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(255, 140, 0, 0.496);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  margin-left: 150px;
+  
+}
+
+.circle img {
+  max-width: 1000px;
+  max-height: 450px;
+  border-radius: 50%;
+  margin: -10px;
+  margin-bottom: 180px;
+  margin-right: 10px;
+  background-image: url(./socialmedia.png);
+  background-repeat: no-repeat;
+}
+button {
+  height: 50px;
+  width: 150px;
+  border-radius: 25px; /* Changed to a smaller value for a more rounded button */
+  font-weight: bold;
+  background-color: rgb(17, 51, 241);
+  color: white;
+  border: none; /* Removed the border */
+  outline: none; /* Removed the outline */
+  cursor: pointer; /* Added cursor pointer on hover */
+  transition: background-color 0.3s ease; /* Added a transition effect */
+  box-shadow: 0 5px 4px rgba(248, 6, 196, 0.315); /* Added a box shadow */
+}
+
+button:hover {
+  background-color: darkblue; /* Darker background color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Increase the intensity of the box shadow on hover */
+}
+
+button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px blue; /* Added a focus effect with a border */
+}
+
+button:active {
+  transform: scale(0.95); /* Slightly scale down the button on click */
+}
+.trydemo {
+  color: rgb(17, 51, 241);
+  font-weight: 800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 24px; /* Increased font size for a larger font height */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4; 
+  /* Adjusted line height for better readability */
+  margin-left: 50px;
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    align-items: flex-start;
+  }
+
+  .glass-card {
+    height: auto;
+
+  }
+
+  .circle {
+    margin-top: 0;
+  }
+
+  .image-container {
+    flex-direction: column;
+  }
+
+  .title {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .bottomcontent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trydemo {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  .navbarmenu {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+
+  .title {
+    margin: 20px 0;
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+
+  .circle img {
+    margin-bottom: 0;
+  }
+}
